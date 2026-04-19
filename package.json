@@ -1,0 +1,46 @@
+{
+  "name": "math-xray",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build --webpack",
+    "start": "next start",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test \"src/**/*.test.ts\"",
+    "seed": "tsx src/scripts/seed.ts",
+    "verify:parity": "tsx scripts/verify-parity.ts",
+    "backfill:context": "tsx src/scripts/backfill-context.ts",
+    "test:e2e": "playwright test --pass-with-no-tests"
+  },
+  "dependencies": {
+    "d3-force": "^3.0.0",
+    "mongoose": "^9.4.1",
+    "next": "16.2.3",
+    "next-auth": "^4.24.14",
+    "openai": "^6.34.0",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "recharts": "^3.8.1",
+    "uuid": "^13.0.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@tailwindcss/postcss": "^4",
+    "@types/d3-force": "^3.0.10",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/uuid": "^10.0.0",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.3",
+    "tailwindcss": "^4",
+    "tsx": "^4.20.6",
+    "typescript": "^5"
+  }
+}

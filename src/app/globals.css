@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  --color-bg: #f7f8fb;
+  --color-surface: #ffffff;
+  --color-surface-raised: #ffffff;
+  --color-text: #111827;
+  --color-text-muted: #4b5563;
+  --color-border: #d1d5db;
+  --color-brand: #4f46e5;
+  --color-brand-hover: #4338ca;
+  --color-brand-active: #3730a3;
+  --color-success: #059669;
+  --color-warning: #d97706;
+  --color-error: #e11d48;
+  --color-brand-foreground: #ffffff;
+  --tone-critical: var(--color-error);
+  --tone-warn: var(--color-warning);
+  --tone-ok: var(--color-success);
+  --tone-muted: var(--color-text-muted);
+
+  --background: var(--color-bg);
+  --foreground: var(--color-text);
+  --surface: var(--color-surface);
+  --muted-foreground: var(--color-text-muted);
+  --brand: var(--color-brand);
+  --brand-foreground: var(--color-brand-foreground);
+  --success: var(--color-success);
+  --warning: var(--color-warning);
+  --danger: var(--color-error);
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-bg: #090c13;
+  --color-surface: #101522;
+  --color-surface-raised: #151c2d;
+  --color-text: #e5e7eb;
+  --color-text-muted: #9ca3af;
+  --color-border: #2b3448;
+  --color-brand: #818cf8;
+  --color-brand-hover: #6366f1;
+  --color-brand-active: #4f46e5;
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #fb7185;
+  --color-brand-foreground: #0b1020;
+  --tone-critical: var(--color-error);
+  --tone-warn: var(--color-warning);
+  --tone-ok: var(--color-success);
+  --tone-muted: var(--color-text-muted);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-foreground);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+a:not([class]) {
+  color: var(--color-brand-hover);
+  text-underline-offset: 3px;
+}
+
+a:not([class]):hover {
+  color: var(--color-brand-active);
+}
+
+* {
+  scrollbar-width: thin;
+}
