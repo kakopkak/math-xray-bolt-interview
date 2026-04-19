@@ -9,10 +9,6 @@
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
-.slidev/
-dist/
-slides-export*.pdf
-slides-export*.pptx
 
 # testing
 /coverage
@@ -53,5 +49,3 @@ yarn-error.log*
 next-env.d.ts
 
 .worktrees/
-outputs/
-tmp/
